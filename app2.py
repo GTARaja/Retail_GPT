@@ -45,7 +45,7 @@ def load_data():
         #storage_context = StorageContext.from_defaults(persist_dir="resume_index")
         # Load index from the storage context
         #index = load_index_from_storage(storage_context=storage_context,service_context=service_context)
-        documents = SimpleDirectoryReader("/Content/Data/").load_data()
+        documents = SimpleDirectoryReader("Content/Data/").load_data()
         index = VectorStoreIndex.from_documents(documents, service_context=service_context)
         #index.storage_context.persist("resume_index")
         return index
