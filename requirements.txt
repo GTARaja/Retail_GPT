@@ -6,3 +6,4 @@ python-dotenv
 langchain
 faiss-cpu
 llama_index
+sentence_transformers
