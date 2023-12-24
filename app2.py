@@ -36,7 +36,7 @@ def load_data():
         query_wrapper_prompt = SimpleInputPrompt("<|USER|>{query_str}<|ASSISTANT|>")
         llm = GoogleGenerativeAI(model="gemini-pro",
                              temperature=0.3)
-        embed_model = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+        embed_model = LangchainEmbedding(GoogleGenerativeAIEmbeddings(model="models/embedding-001"))
         service_context = ServiceContext.from_defaults(
           chunk_size=1024,
           llm=llm,
