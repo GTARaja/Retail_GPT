@@ -21,7 +21,7 @@ with st.chat_message("user"):
     st.write("Hello USer 👋 : Please wait while we initialize RetailGPT !")
 
 print("Here!!!")
-print(cmd)
+#print(pwd)
 if "messages" not in st.session_state.keys(): # Initialize the chat message history
     st.session_state.messages = [
         {"role": "assistant", "content": "RetailGPT is ready! Shoot your questions"}
